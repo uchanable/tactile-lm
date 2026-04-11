@@ -103,7 +103,16 @@ tactile-lm/
 
 ### SOM + Hebbian Cross-Modal Architecture (Ongoing)
 
-2×2 factorial experiment (PPO/SOM × CT OFF/CT ON, n=30 seeds) in progress.
+Post-ICDL implementation of the neural architecture proposed in the paper but not originally implemented:
+
+- **Discriminative SOM**: 13 body parts × 6 channels = 78D → body-topographic map (SA-I, FA-I, FA-II, normal force)
+- **Affective SOM**: 13 body parts × 1 CT channel = 13D → CT-specific map (hairy skin only)
+- **Hebbian cross-modal binding**: learns associations between discriminative and affective maps
+- **Critical period scheduler**: high SOM plasticity early, gradual decay
+- **Intrinsic motivation**: curiosity-driven exploration via SOM prediction error
+- Implemented as Gym observation wrapper (zero MIMo modification, 2.2 ms/step overhead)
+
+2×2 factorial experiment (PPO/SOM+PPO × CT OFF/CT ON, n=30 seeds) in progress.
 Hypothesis: SOM body-topographic representation unlocks CT information that raw PPO cannot exploit.
 
 ## Acknowledgments

@@ -71,14 +71,40 @@ tactile-lm/
 
 ## Key Results
 
+### Sensor Validation (Random Motor Babbling)
+
 | Metric | CT OFF (3ch) | CT ON (7ch) |
 |--------|-------------|-------------|
 | Channels/sensor | 3 | 7 |
 | CT on hairy skin | N/A | 0.050 |
 | CT on glabrous skin | N/A | 0.000 |
-| SA-I contribution | - | 12.7% |
-| FA-I contribution | - | 17.4% |
-| CT contribution | - | 0.01% |
+| SA-I contribution | — | 12.7% |
+| FA-I contribution | — | 17.4% |
+| CT contribution | — | 0.01% |
+
+### RL Experiments (PPO, n=30 seeds, 4 training horizons)
+
+**Reach Task** — CT ON shows consistent advantage:
+
+| Metric | Value |
+|--------|-------|
+| Effect size (Hedges' g, 1M steps) | 0.37 (small) |
+| Meta-analysis (4 time steps combined) | θ = 9.69, **p = .016** |
+| Combined Bayes Factor | **BF₁₀ = 453 (Extreme evidence)** |
+| CT ON win rate (1M) | 67% (20/30) |
+| Touch activation ratio (CT ON / CT OFF) | **0.49** (half the touch for higher reward) |
+
+**Self-body Task** — No difference (as expected):
+
+| Metric | Value |
+|--------|-------|
+| Combined Bayes Factor | BF₁₀ = 0.111 (moderate evidence for H₀) |
+| Interpretation | Binary reward is orthogonal to contact quality |
+
+### SOM + Hebbian Cross-Modal Architecture (Ongoing)
+
+2×2 factorial experiment (PPO/SOM × CT OFF/CT ON, n=30 seeds) in progress.
+Hypothesis: SOM body-topographic representation unlocks CT information that raw PPO cannot exploit.
 
 ## Acknowledgments
 

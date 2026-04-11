@@ -474,20 +474,16 @@ def make_figures(results):
         plt.colorbar(im, ax=ax, shrink=0.8, label="Mean activation")
         ax.set_title("(d) Per-body activation heatmap (CT ON)")
 
-    # 2e: CT channel time series (zoomed)
+    # 2e: CT channel time series (zoomed) — smoothed mean only
     ax = fig2.add_subplot(gs[2, 0:2])
-    for seed_idx, r in enumerate(results["multi_receptor"]):
-        ct_ts = np.array(r["channel_means"]["CT"])
-        ct_smooth = np.convolve(ct_ts, np.ones(window)/window, mode="valid")
-        ax.plot(np.arange(len(ct_smooth)), ct_smooth,
-                color=C_CT, alpha=0.4, linewidth=0.8)
     ct_mean_ts = np.mean([np.convolve(np.array(r["channel_means"]["CT"]),
                           np.ones(window)/window, mode="valid")
                           for r in results["multi_receptor"]], axis=0)
     ax.plot(np.arange(len(ct_mean_ts)), ct_mean_ts,
-            color=C_CT, linewidth=2.0, label="CT (mean)")
+            color=C_CT, linewidth=2.0, label=f"CT (smoothed mean, {N_SEEDS} seeds)")
     ax.set_xlabel("Step")
     ax.set_ylabel("CT activation")
+    ax.set_ylim(0, 0.200)
     ax.set_title("(e) CT channel activation time series (zoomed)")
     ax.legend()
 

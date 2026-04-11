@@ -1,6 +1,6 @@
 # CT Afferent ON vs OFF: Experiment Results
 
-**Date**: 2026-04-04 02:02
+**Date**: 2026-04-04 11:42
 **Steps per condition**: 1000
 **Seeds**: [42, 123, 7]
 **Policy**: Random (uniform action sampling)
@@ -9,52 +9,52 @@
 
 | Condition | Contact steps (mean +/- SD) | % of total |
 |-----------|---------------------------|------------|
-| CT OFF (force_vector) | 989.0 +/- 2.2 | 98.9% |
-| CT ON (multi_receptor) | 990.3 +/- 0.9 | 99.0% |
+| CT OFF (force_vector) | 987.7 +/- 0.9 | 98.8% |
+| CT ON (multi_receptor) | 991.3 +/- 1.2 | 99.1% |
 
 ## 2. Total Sensor Activation
 
 | Condition | Mean activation (mean +/- SD) |
 |-----------|-------------------------------|
-| CT OFF | 341.7863 +/- 1.8000 |
-| CT ON  | 353.5394 +/- 56.6555 |
+| CT OFF | 357.6529 +/- 21.2205 |
+| CT ON  | 297.4780 +/- 20.9603 |
 
 ## 3. Per-Body Contact Frequency
 
 | Body Part | Skin Type | CT OFF (%) | CT ON (%) |
 |-----------|-----------|------------|-----------|
-| head | hairy | 63.9 | 63.3 |
-| hip | hairy | 37.1 | 35.8 |
-| left_foot | glabrous | 25.5 | 30.5 |
-| left_hand | glabrous | 15.2 | 8.3 |
-| left_lower_arm | hairy | 71.3 | 71.0 |
-| left_lower_leg | hairy | 0.0 | 0.3 |
-| left_upper_arm | hairy | 8.2 | 9.7 |
-| left_upper_leg | hairy | 1.9 | 25.5 |
-| lower_body | hairy | 9.0 | 0.1 |
-| right_foot | glabrous | 24.6 | 36.0 |
-| right_hand | glabrous | 11.4 | 12.5 |
-| right_lower_arm | hairy | 72.0 | 70.6 |
-| right_lower_leg | hairy | 0.0 | 1.4 |
-| right_upper_arm | hairy | 17.4 | 19.4 |
-| right_upper_leg | hairy | 3.8 | 18.6 |
-| upper_body | hairy | 31.3 | 35.4 |
+| head | hairy | 67.5 | 69.4 |
+| hip | hairy | 39.2 | 32.4 |
+| left_foot | glabrous | 23.3 | 24.7 |
+| left_hand | glabrous | 13.3 | 25.7 |
+| left_lower_arm | hairy | 70.5 | 75.8 |
+| left_lower_leg | hairy | 0.3 | 0.2 |
+| left_upper_arm | hairy | 8.1 | 8.4 |
+| left_upper_leg | hairy | 3.1 | 10.6 |
+| lower_body | hairy | 4.7 | 9.6 |
+| right_foot | glabrous | 24.1 | 21.9 |
+| right_hand | glabrous | 10.2 | 11.8 |
+| right_lower_arm | hairy | 73.0 | 71.5 |
+| right_lower_leg | hairy | 0.0 | 0.2 |
+| right_upper_arm | hairy | 30.8 | 18.8 |
+| right_upper_leg | hairy | 11.5 | 7.3 |
+| upper_body | hairy | 30.1 | 22.1 |
 
 ## 4. Multi-receptor Channel Analysis (CT ON only)
 
 | Channel | Mean activation | % of total |
 |---------|-----------------|------------|
-| SA-I | 44.742561 | 12.7% |
-| FA-I | 61.350667 | 17.4% |
-| FA-II | 21.881557 | 6.2% |
-| CT | 0.049831 | 0.01% |
-| Normal | 225.514803 | 63.8% |
+| SA-I | 42.160572 | 14.2% |
+| FA-I | 59.184425 | 19.9% |
+| FA-II | 21.013332 | 7.1% |
+| CT | 0.044726 | 0.02% |
+| Normal | 175.074914 | 58.9% |
 
 ## 5. CT Response by Skin Type
 
 | Skin Type | Mean CT activation |
 |-----------|-------------------|
-| Hairy (CT present) | 0.049831 |
+| Hairy (CT present) | 0.044726 |
 | Glabrous (no CT) | 0.000000 |
 
 ## 6. Key Findings
@@ -65,7 +65,7 @@
    (Vallbo et al. 1999). Glabrous areas (hands, feet) show zero CT activation.
 3. **CT firing rate follows inverted-U velocity tuning**: Peak at ~3 cm/s 
    (Loken et al. 2009), providing velocity-dependent affective touch signals.
-4. **CT channel constitutes 0.014% of total multi-receptor output**: 
+4. **CT channel constitutes 0.015% of total multi-receptor output**: 
    While small in magnitude (consistent with CT's role as a gentle-touch sensor),
    this represents a qualitatively new velocity-tuned signal absent in force-only mode.
 

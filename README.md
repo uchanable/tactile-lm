@@ -48,9 +48,21 @@ tactile-lm/
 │   ├── skin_map.py              # Body-site receptor mapping
 │   ├── developmental.py         # Maturation schedule
 │   └── test_ct_touch.py         # Tests (6 tests)
+├── som/                         # SOM + Hebbian cross-modal network
+│   ├── core.py                  # Self-Organizing Map implementation
+│   ├── hebbian.py               # Hebbian cross-modal learning
+│   ├── preprocessor.py          # Tactile signal preprocessing
+│   ├── critical_periods.py      # Developmental critical periods
+│   ├── intrinsic_motivation.py  # Curiosity-driven exploration
+│   └── som_wrapper.py           # MIMo integration wrapper
 ├── experiments/                 # Experiment scripts & results
 │   ├── ct_comparison.py         # CT ON vs OFF analysis
-│   ├── run_scaling_experiment.py # 50K-1000K scaling
+│   ├── run_som_experiment.py    # SOM factorial experiment
+│   ├── run_ablation_experiment.py # Ablation study
+│   ├── run_developmental_experiment.py # Developmental persona
+│   ├── analyze_som_results.py   # SOM results analysis
+│   ├── analyze_body_contacts.py # Body contact analysis
+│   ├── generate_figures.py      # Paper figure generation
 │   └── rl_results/              # Training results
 ├── figures/                     # Paper figures
 ├── videos/                      # Demo videos
@@ -67,19 +79,6 @@ tactile-lm/
 | SA-I contribution | - | 12.7% |
 | FA-I contribution | - | 17.4% |
 | CT contribution | - | 0.01% |
-
-## Citation
-
-```bibtex
-@inproceedings{yim2026ct-touch,
-  title     = {Does Affective Touch Matter for Development?
-               CT Afferent Modeling in the MIMo Infant Simulation},
-  author    = {Yim, Youchan},
-  booktitle = {Proc. IEEE International Conference on
-               Development and Learning (ICDL)},
-  year      = {2026}
-}
-```
 
 ## Acknowledgments
 

@@ -65,8 +65,7 @@ tactile-lm/
 │   ├── generate_figures.py      # Paper figure generation
 │   └── rl_results/              # Training results
 ├── figures/                     # Paper figures
-├── videos/                      # Demo videos
-└── MAC_STUDIO_SETUP.md          # Setup guide for Mac Studio
+└── videos/                      # Demo videos
 ```
 
 ## Key Results
@@ -115,6 +114,12 @@ Post-ICDL implementation of the neural architecture proposed in the paper but no
 
 2×2 factorial experiment (PPO/SOM+PPO × CT OFF/CT ON, n=30 seeds) in progress.
 Hypothesis: SOM body-topographic representation unlocks CT information that raw PPO cannot exploit.
+
+## Follow-up Work
+
+A separate repository with ongoing follow-up extensions is maintained
+privately during peer review. A link will be added here once the
+follow-up work is publicly released.
 
 ## Acknowledgments
 
